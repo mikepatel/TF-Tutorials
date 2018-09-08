@@ -43,6 +43,7 @@ path_to_file = keras.utils.get_file(
 # explore data
 text = unidecode.unidecode(open(path_to_file).read())
 print("\nLength of dataset text: " + str(len(text)))
+#print(text[:1000])
 
 # create dictionaries to map chars <--> indices
 unique = sorted(set(text))  # 'unique' contains all unique chars in file
@@ -226,6 +227,8 @@ for i in range(num_char_generated):
 
     gen_text += idx2char[predict_id]
 
+################################################################################
+# print output
 print("\n#########################################################")
 print(start_string + gen_text)
 print("\n#########################################################")
